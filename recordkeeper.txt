@@ -1,0 +1,4 @@
+issuer's id
+name of record
+description
+date
