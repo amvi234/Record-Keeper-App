@@ -14,6 +14,3 @@ def home(request):
     else:
         form = Records()
     return render(request, 'inputrecords.html', {"form": form})
-
-def thanks(request):
-    return HttpResponse("your record is saved")
