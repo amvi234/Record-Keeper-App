@@ -6,7 +6,11 @@ def home(request):
     if request.method == "POST":
         form = Records(request.POST)
         if form.is_valid():
-            return HttpResponseRedirect('thanks')
+            name = request.POST.get('name')
+            id = request.POST.get('id')
+            description = request.POST.get('description')
+            date = request.POST.get('date')
+            return HttpResponseRedirect('/')
     else:
         form = Records()
     return render(request, 'inputrecords.html', {"form": form})
